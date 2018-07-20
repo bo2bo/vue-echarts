@@ -9,9 +9,14 @@ export default new Router({
       redirect: '/login'
     },
     {
-      path: '/panorama',
-      component: resolve => require(['../components/pages/Panorama.vue'], resolve),
-      children: [{
+      path: '/macrography',
+      component: resolve => require(['../components/common/Home.vue'], resolve),
+      children: [
+        // {
+        //   path: '/panorama',
+        //   component: resolve => require(['../components/pages/Panorama.vue'], resolve)
+        // }, 
+        {
           path: '/macrography',
           component: resolve => require(['../components/pages/Macrography.vue'], resolve)
         },

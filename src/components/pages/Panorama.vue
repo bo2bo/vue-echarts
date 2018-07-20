@@ -1,17 +1,17 @@
 <template>
-    <div class="wrapper">
-        <v-head></v-head>
-        <div class="content">
-            <transition name="move" mode="out-in"><router-view></router-view></transition>
-        </div>
+    <div class="panorama">
+        <h1>全景</h1>
     </div>
 </template>
 
 <script>
-    import vHead from './../common/Header.vue';
-    export default {
-        components:{
-            vHead
-        }
-    }
+export default {
+  data: function() {
+    return {
+      count: 0
+    };
+  },
+  methods: {},
+  mounted() {}
+};
 </script>
