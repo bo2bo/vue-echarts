@@ -12,32 +12,32 @@
         </div>
       </el-tab-pane>
       <el-tab-pane label="结构" name="struct">
-        <div id="stack-chart-history">
+        <div id="stack-chart-struct">
           结构
         </div>
       </el-tab-pane>
       <el-tab-pane label="GFP" name="GFP">
-        <div id="stack-chart-history">
+        <div id="stack-chart-GFP">
           GFP
         </div>
       </el-tab-pane>
       <el-tab-pane label="OPI" name="OPI">
-        <div id="stack-chart-history">
+        <div id="stack-chart-OPI">
           OPI
         </div>
       </el-tab-pane>
       <el-tab-pane label="EXP" name="EXP">
-        <div id="stack-chart-history">
+        <div id="stack-chart-EXP">
           EXP
         </div>
       </el-tab-pane>
       <el-tab-pane label="动能" name="energy">
-        <div id="stack-chart-history">
+        <div id="stack-chart-energy">
           动能
         </div>
       </el-tab-pane>
       <el-tab-pane label="排名" name="rank">
-        <div id="bar-chart-history">
+        <div id="bar-chart-rank">
           排名
         </div>
       </el-tab-pane>
