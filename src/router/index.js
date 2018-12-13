@@ -9,32 +9,67 @@ export default new Router({
       redirect: '/login'
     },
     {
-      path: '/macrography',
+      path: '/tendaily',
       component: resolve => require(['../components/common/Home.vue'], resolve),
-      children: [
-        // {
-        //   path: '/panorama',
-        //   component: resolve => require(['../components/pages/Panorama.vue'], resolve)
-        // }, 
-        {
-          path: '/macrography',
-          component: resolve => require(['../components/pages/Macrography.vue'], resolve)
+      children: [{
+          path: '/tendaily',
+          component: resolve => require(['../components/pages/ArticleTenDaily.vue'], resolve)
         },
         {
-          path: '/industry',
-          component: resolve => require(['../components/pages/Industry.vue'], resolve)
+          path: '/hotarticles',
+          component: resolve => require(['../components/pages/ArticleHotArticles.vue'], resolve)
         },
         {
-          path: '/datauploading',
-          component: resolve => require(['../components/pages/DataUploading.vue'], resolve)
+          path: '/expertcomment',
+          component: resolve => require(['../components/pages/ArticleExpertComment.vue'], resolve)
         },
         {
-          path: '/dataevaluation',
-          component: resolve => require(['../components/pages/DataEvaluation.vue'], resolve)
+          path: '/commenttendaily',
+          component: resolve => require(['../components/pages/CommentTenDaily.vue'], resolve)
         },
         {
-          path: '/AD',
-          component: resolve => require(['../components/pages/AD.vue'], resolve)
+          path: '/commenthotarticles',
+          component: resolve => require(['../components/pages/CommentHotArticles.vue'], resolve)
+        },
+        {
+          path: '/commentexpertcomment',
+          component: resolve => require(['../components/pages/CommentExpertComment.vue'], resolve)
+        },
+        {
+          path: '/iask',
+          component: resolve => require(['../components/pages/CommentIAsk.vue'], resolve)
+        },
+        {
+          path: '/iaskcomment',
+          component: resolve => require(['../components/pages/CommentIAskComment.vue'], resolve)
+        },
+        {
+          path: '/seesawbattle',
+          component: resolve => require(['../components/pages/CommentSeesawBattle.vue'], resolve)
+        },
+        {
+          path: '/partakeseesawbattle',
+          component: resolve => require(['../components/pages/PartakeSeesawBattle.vue'], resolve)
+        },
+        {
+          path: '/partakecontestlist',
+          component: resolve => require(['../components/pages/PartakeContestlList.vue'], resolve)
+        },
+        {
+          path: '/partakecontestindex',
+          component: resolve => require(['../components/pages/PartakeContestlIndex.vue'], resolve)
+        },
+        {
+          path: '/index',
+          component: resolve => require(['../components/pages/index.vue'], resolve)
+        },
+        {
+          path: '/high',
+          component: resolve => require(['../components/pages/high.vue'], resolve)
+        },
+        {
+          path: '/rotationchart',
+          component: resolve => require(['../components/pages/PictureRotationChart.vue'], resolve)
         }
       ]
     },

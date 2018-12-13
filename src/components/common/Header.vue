@@ -4,12 +4,12 @@
       <img src="../../../static/img/logo.png">
     </div>
     <div class="tabbar">
-      <el-menu :default-active="onRoutes" class="el-menu-demo" background-color="#16171c" text-color="#bfcbd9" unique-opened router mode="horizontal">
+      <el-menu :default-active="onRoutes" class="el-menu-demo" background-color="#242f42" text-color="#bfcbd9" unique-opened router mode="horizontal">
         <template v-for="item in items">
           <template v-if="item.subs">
             <el-submenu :index="item.index">
               <template slot="title">
-                <!-- <i :class="item.icon"></i> -->
+                <i :class="item.icon"></i>
                 {{ item.title }}</template>
               <el-menu-item v-for="(subItem,i) in item.subs" :key="i" :index="subItem.index">{{ subItem.title }}
               </el-menu-item>
@@ -42,40 +42,101 @@ export default {
       name: "bo_oc",
       items: [
         {
-          // icon: "el-icon-menu",
-          index: "2",
-          title: "数据展示",
+          icon: "el-icon-menu",
+          index: "1",
+          title: "文章模块",
           subs: [
             {
-              index: "macrography",
-              title: "宏观"
+              index: "tendaily",
+              title: "每日十条"
             },
             {
-              index: "industry",
-              title: "行业"
+              index: "hotarticles",
+              title: "热点好文"
             },
             {
-              index: "AD",
-              title: "AD-"
+              index: "expertcomment",
+              title: "首席专家评论"
             }
           ]
         },
         {
-          // icon: "el-icon-star-on",
-          index: "datauploading",
-          title: "数据上传"
+          icon: "el-icon-menu",
+          index: "2",
+          title: "评论模块",
+          subs: [
+            {
+              index: "commenttendaily",
+              title: "每日十条的评论"
+            },
+            {
+              index: "commenthotarticles",
+              title: "热点好文的评论"
+            },
+            {
+              index: "commentexpertcomment",
+              title: "首席专家评论的评论"
+            },
+            {
+              index: "iask",
+              title: "我要提问"
+            },
+            {
+              index: "iaskcomment",
+              title: "我要提问的评论"
+            },
+            {
+              index: "seesawbattle",
+              title: "观点拉锯战的评论"
+            }
+          ]
         },
         {
-          // icon: "el-icon-document",
-          index: "dataevaluation",
-          title: "数据评估"
+          icon: "el-icon-menu",
+          index: "3",
+          title: "参与模块",
+          subs: [
+            {
+              index: "partakeseesawbattle",
+              title: "观点拉锯战"
+            },
+            {
+              index: "partakecontestlist",
+              title: "竞猜大擂台-参与列表"
+            },
+            {
+              index: "partakecontestindex",
+              title: "竞猜大擂台-指标列表"
+            }
+          ]
+        },
+        {
+          icon: "el-icon-menu",
+          index: "4",
+          title: "图片模块",
+          subs: [
+            {
+              index: "rotationchart",
+              title: "轮播图"
+            }
+          ]
+        },
+        {
+          icon: "el-icon-menu",
+          index: "index",
+          title: "指标模块"
+        },
+        {
+          icon: "el-icon-menu",
+          index: "high",
+          title: "高频模块"
         }
       ]
     };
   },
   computed: {
     username() {
-      let username = localStorage.getItem("ms_username");
+      let username = localStorage.getItem("username");
       return username ? username : this.name;
     },
     onRoutes() {
@@ -85,7 +146,7 @@ export default {
   methods: {
     handleCommand(command) {
       if (command == "loginout") {
-        localStorage.removeItem("ms_username");
+        localStorage.removeItem("username");
         this.$router.push("/login");
       }
     }

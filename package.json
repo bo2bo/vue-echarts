@@ -1,7 +1,7 @@
 {
-  "name": "vue-ehcarts",
+  "name": "cms_manage",
   "version": "1.0.0",
-  "description": "vue+echarts",
+  "description": "cms_manage",
   "author": "bo_oc",
   "private": true,
   "scripts": {

@@ -8,6 +8,14 @@ import echarts from 'echarts'
 import $ from "jquery"
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
+// 全局变量及方法
+import global_ from './components/Global'  //引用文件
+Vue.prototype.GLOBAL = global_    //挂载到Vue实例上面
+// 富文本编辑
+// import './../static/ueditor/ueditor.config'
+// import './../static/ueditor/ueditor.all.min'
+// import './../static/ueditor/lang/zh-cn/zh-cn'　　　
+// import './../static/ueditor/ueditor.parse.min'
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false

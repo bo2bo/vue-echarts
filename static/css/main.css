@@ -21,17 +21,13 @@ a {
 }
 
 .content {
-    background: none repeat scroll 0 0 #313342;
+    background: none repeat scroll 0 0 #fff;
     position: absolute;
     right: 0;
     top: 68px;
-    bottom: 0;
+    bottom: 50px;
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
     overflow-y: auto;
-}
-.macrography{
-    width: 1200px;
-    margin: 0 auto;
 }

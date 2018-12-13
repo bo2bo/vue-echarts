@@ -1,7 +1,3 @@
-# vue-ehcarts
-
-> vue+echarts
-
 ## Build Setup
 
 ``` bash

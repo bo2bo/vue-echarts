@@ -18,9 +18,11 @@
 </template>
 
 <script>
+import qs from "qs";
 export default {
   data: function() {
     return {
+      url: this.GLOBAL.url + "login",
       ruleForm: {
         username: "",
         password: ""
@@ -38,8 +40,25 @@ export default {
       const self = this;
       self.$refs[formName].validate(valid => {
         if (valid) {
-          localStorage.setItem("ms_username", self.ruleForm.username);
-          self.$router.push("/macrography");
+          self.$axios
+            .post(
+              self.url,
+              qs.stringify({
+                userName: self.ruleForm.username,
+                userPassWord: self.ruleForm.password
+              })
+            )
+            .then(function(res) {
+              if (res.data.body.login) {
+                localStorage.setItem("username", self.ruleForm.username);
+                self.$router.push("/tendaily");
+              } else {
+                alert("用户名或密码输入错误！");
+              }
+            })
+            .catch(function(err) {
+              console.log(err);
+            });
         } else {
           console.log("error submit!!");
           return false;
