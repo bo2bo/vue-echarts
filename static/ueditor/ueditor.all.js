@@ -5812,7 +5812,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                 checkOffset(this);
                 nativeRange.setStart(this.startContainer, this.startOffset);
                 nativeRange.setEnd(this.endContainer, this.endOffset);
-                sel.addRange(nativeRange);
+                // sel.addRange(nativeRange);
             }
             return this;
         },
@@ -24561,7 +24561,6 @@ UE.plugin.register('simpleupload', function (){
               var xhr = new XMLHttpRequest();
               xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
-                    debugger;
                     data = JSON.parse(xhr.response);
                     var link, loader,
                         body = (iframe.contentDocument || iframe.contentWindow.document).body,

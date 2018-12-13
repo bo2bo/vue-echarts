@@ -21,7 +21,8 @@
     },
     data() {
       return {
-        editor: null
+        editor: null,
+        url: this.GLOBAL.url + "util/uploadImg"
       }
     },
     mounted() {
@@ -31,7 +32,7 @@
       UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
       UE.Editor.prototype.getActionUrl = function(action) {
         if (action == 'uploadImg') {
-            return 'http://192.168.1.20:8101/cms/util/uploadImg';//此处写自定义的图片上传路径
+            return _this.url;//此处写自定义的图片上传路径
         }else {
             return this._bkGetActionUrl.call(this, action);
         }

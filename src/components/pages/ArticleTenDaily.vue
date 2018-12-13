@@ -151,10 +151,7 @@
       </div>
     </el-dialog>
     <!-- 文章对话框 -->
-    <el-dialog
-      title="添加文章"
-      :visible.sync="articleFormVisible"
-    >
+    <el-dialog :visible.sync="articleFormVisible">
       <UEditor :config="config" ref="ueditor"></UEditor>
       <div
         slot="footer"
@@ -172,7 +169,7 @@
 
 <script>
 import tableCom from "./../component/table.vue";
-import UEditor from "./../component/ueditor.vue";
+import UEditor from "./../component/UEditor.vue";
 import qs from "qs";
 export default {
   components: {
@@ -188,7 +185,7 @@ export default {
       config: {
             autoHeightEnabled: false,
             autoFloatEnabled: true,
-            initialContent:'请输入内容',
+            // initialContent:'请输入内容',
             autoClearinitialContent:true,
             initialFrameWidth: null,
             initialFrameHeight: 450,
@@ -343,7 +340,6 @@ export default {
     },
     addArticle(){
       let self = this;
-      debugger;
       self.$axios
         .post(
           self.url.addArticleUrl,

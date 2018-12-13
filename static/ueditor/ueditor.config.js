@@ -31,8 +31,7 @@
         UEDITOR_HOME_URL: URL
 
         // 服务器统一请求接口路径
-        , serverUrl: "http://192.168.1.20:8101/cms/util/exec"
-        // , serverUrl: "http://192.168.1.20:8101/util/newsImgUpload.do"
+        , serverUrl: window.url + "util/exec"
 
         //工具栏上的所有的功能按钮和下拉框，可以在new编辑器的实例时选择自己需要的重新定义
         , toolbars: [[
@@ -430,7 +429,7 @@
 			video:  ['autoplay', 'controls', 'loop', 'preload', 'src', 'height', 'width', 'class', 'style']
 		}
     };
-    console.log(window.UEDITOR_CONFIG);
+    // console.log(window.UEDITOR_CONFIG);
 
     function getUEBasePath(docUrl, confUrl) {
 
